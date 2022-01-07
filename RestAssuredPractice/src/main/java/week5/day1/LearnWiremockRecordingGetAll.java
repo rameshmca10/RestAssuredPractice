@@ -6,7 +6,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-public class LearnWiremockRecording {
+public class LearnWiremockRecordingGetAll {
 
 	@Test
 	public void createIncidentWithoutBody() {
@@ -15,7 +15,7 @@ public class LearnWiremockRecording {
 //			step2: Authentication (basic)
 		RestAssured.authentication = RestAssured.basic("admin", "eTbx92PpzFOZ");
 //			step3: request type (get) { ctrl+2 , l }
-		Response response = RestAssured.given().contentType(ContentType.JSON).post();
+		Response response = RestAssured.given().get();
 //			step4: print response body
 		response.prettyPrint();
 //			step5: print status code
